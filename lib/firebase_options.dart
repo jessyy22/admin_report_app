@@ -42,45 +42,6 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyA8EpmfJekWA4uF5712JsjtiyybZxetZd4',
-<<<<<<< HEAD
-=======
-    appId: '1:1007174949215:web:4b129124186f6e3f90feea',
-    messagingSenderId: '1007174949215',
-    projectId: 'rtoda-notification-syste-255ce',
-    authDomain: 'rtoda-notification-syste-255ce.firebaseapp.com',
-    storageBucket: 'rtoda-notification-syste-255ce.firebasestorage.app',
-    measurementId: 'G-P5BSNCVTZZ',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDloPBQvcjprutbUva6-HizIlB2k1T1T3U',
-    appId: '1:1007174949215:android:f700e4d6b3cef0d790feea',
-    messagingSenderId: '1007174949215',
-    projectId: 'rtoda-notification-syste-255ce',
-    storageBucket: 'rtoda-notification-syste-255ce.firebasestorage.app',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDK9xqB39eNymkCC1jhbNkGZ2CrxWAw8aY',
-    appId: '1:1007174949215:ios:c01b83b5ec88292990feea',
-    messagingSenderId: '1007174949215',
-    projectId: 'rtoda-notification-syste-255ce',
-    storageBucket: 'rtoda-notification-syste-255ce.firebasestorage.app',
-    iosBundleId: 'com.example.reportApp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDK9xqB39eNymkCC1jhbNkGZ2CrxWAw8aY',
-    appId: '1:1007174949215:ios:c01b83b5ec88292990feea',
-    messagingSenderId: '1007174949215',
-    projectId: 'rtoda-notification-syste-255ce',
-    storageBucket: 'rtoda-notification-syste-255ce.firebasestorage.app',
-    iosBundleId: 'com.example.reportApp',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyA8EpmfJekWA4uF5712JsjtiyybZxetZd4',
->>>>>>> 2b2e721582bc328acc2155f64bd974a0c37b9131
     appId: '1:1007174949215:web:13d64b5f0174cc3c90feea',
     messagingSenderId: '1007174949215',
     projectId: 'rtoda-notification-syste-255ce',
@@ -88,7 +49,6 @@ class DefaultFirebaseOptions {
     storageBucket: 'rtoda-notification-syste-255ce.firebasestorage.app',
     measurementId: 'G-NY0JNLEQ56',
   );
-<<<<<<< HEAD
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDloPBQvcjprutbUva6-HizIlB2k1T1T3U',
@@ -124,6 +84,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'rtoda-notification-syste-255ce.firebasestorage.app',
     measurementId: 'G-T8TRY24TV7',
   );
-=======
->>>>>>> 2b2e721582bc328acc2155f64bd974a0c37b9131
 }

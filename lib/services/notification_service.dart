@@ -1,6 +1,5 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-<<<<<<< HEAD
 /// Notification helpers for the RTODA Flutter Web admin.
 ///
 /// Firebase service-account credentials are NOT stored in the admin app.
@@ -11,20 +10,12 @@ class NotificationService {
   static String? get currentAdminId => _db.auth.currentUser?.id;
 
   /// Send a push notification to one user's registered devices.
-=======
-/// Sends RTODA notifications through the Supabase Edge Function.
-/// Firebase service-account credentials stay inside Supabase.
-class NotificationService {
-  static final SupabaseClient _db = Supabase.instance.client;
-
->>>>>>> 2b2e721582bc328acc2155f64bd974a0c37b9131
   static Future<void> sendPush({
     required String userId,
     required String title,
     required String message,
     String type = 'general',
   }) async {
-<<<<<<< HEAD
     final response = await _db.functions.invoke(
       'rapid-handler',
       body: {
@@ -54,23 +45,12 @@ await NotificationService.sendPush(
 
   /// Send to every user with the supplied role.
   /// This requires rapid-handler to accept a `role` recipient.
-=======
-    await _invoke({
-      'user_id': userId,
-      'title': title,
-      'message': message,
-      'type': type,
-    });
-  }
-
->>>>>>> 2b2e721582bc328acc2155f64bd974a0c37b9131
   static Future<void> sendPushToRole({
     required String role,
     required String title,
     required String message,
     String type = 'general',
   }) async {
-<<<<<<< HEAD
     final response = await _db.functions.invoke(
       'rapid-handler',
       body: {
@@ -167,31 +147,4 @@ class AppNotification {
       )?.toLocal(),
     );
   }
-=======
-    await _invoke({
-      'role': role,
-      'title': title,
-      'message': message,
-      'type': type,
-    });
-  }
-
-  static Future<void> _invoke(Map<String, dynamic> body) async {
-    final response = await _db.functions.invoke(
-      'rapid-handler',
-      body: body,
-    );
-
-    final data = response.data;
-    if (response.status < 200 || response.status >= 300) {
-      throw Exception('Notification request failed: $data');
-    }
-
-    if (data is Map && data['success'] == false) {
-      throw Exception(
-        data['error'] ?? data['message'] ?? 'Notification failed',
-      );
-    }
-  }
->>>>>>> 2b2e721582bc328acc2155f64bd974a0c37b9131
 }
